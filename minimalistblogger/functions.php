@@ -445,15 +445,15 @@ require_once(trailingslashit(get_template_directory()) . 'justinadlock-customize
  * Depending on your implementation, you may want to change the include call:
  *
  * Parent Theme:
- * require_once get_template_directory() . '/pa/class-tgm-plugin-activation.php';
+ * require_once get_template_directory() . '/inc/tgm/class-tgm-plugin-activation.php';
  *
  * Child Theme:
- * require_once get_stylesheet_directory() . '/pa/class-tgm-plugin-activation.php';
+ * require_once get_stylesheet_directory() . '/inc/tgm/class-tgm-plugin-activation.php';
  *
  * Plugin:
- * require_once dirname( __FILE__ ) . '/pa/class-tgm-plugin-activation.php';
+ * require_once dirname( __FILE__ ) . '/inc/tgm/class-tgm-plugin-activation.php';
  */
-require_once get_template_directory() . '/pa/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/tgm/class-tgm-plugin-activation.php';
 
 add_action('tgmpa_register', 'minimalistblogger_register_required_plugins');
 
@@ -507,7 +507,7 @@ function minimalistblogger_register_required_plugins()
         'has_notices'  => true,                    // Show admin notices or not.
         'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
         'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-        'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+        'is_automatic' => true,                   // Automatically activate plugins after installation or not.
         'message'      => '',                      // Message to output right before the plugins table.
 
 
